@@ -1,0 +1,31 @@
+[0m13:41:10.931878 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3417e2d880>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f34179c83e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3418076c30>]}
+
+
+============================== 13:41:10.935845 | c50ac207-cec2-43cb-ae1b-aff1a109464f ==============================
+[0m13:41:10.935845 [info ] [MainThread]: Running with dbt=1.11.2
+[0m13:41:10.936365 [debug] [MainThread]: running dbt with arguments {'no_print': 'None', 'log_format': 'default', 'profiles_dir': '/home/ucha/.dbt', 'static_parser': 'True', 'partial_parse': 'True', 'invocation_command': 'dbt init books_analytics', 'quiet': 'False', 'introspect': 'True', 'log_path': 'logs', 'version_check': 'True', 'use_experimental_parser': 'False', 'cache_selected_only': 'False', 'target_path': 'None', 'empty': 'None', 'use_colors': 'True', 'debug': 'False', 'log_cache_events': 'False', 'printer_width': '80', 'write_json': 'True', 'send_anonymous_usage_stats': 'True', 'indirect_selection': 'eager', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'fail_fast': 'False', 'warn_error': 'None'}
+[0m13:41:10.946435 [info ] [MainThread]: Creating dbt configuration folder at /home/ucha/.dbt
+[0m13:41:10.948091 [debug] [MainThread]: Starter project path: /home/ucha/Documents/project/stream-sense-project/venv/lib/python3.12/site-packages/dbt/include/starter_project
+[0m13:41:10.950863 [info ] [MainThread]: 
+Your new dbt project "books_analytics" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m13:41:10.951662 [info ] [MainThread]: Setting up your profile.
+[0m13:43:28.282678 [info ] [MainThread]: Profile books_analytics written to /home/ucha/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m13:43:28.284769 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 137.41353, "process_in_blocks": "6720", "process_kernel_time": 0.165026, "process_mem_max_rss": "104404", "process_out_blocks": "80", "process_user_time": 1.554413}
+[0m13:43:28.285932 [debug] [MainThread]: Command `dbt init` succeeded at 13:43:28.285720 after 137.41 seconds
+[0m13:43:28.286901 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f34174ded50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f34173c9df0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f34197a0770>]}
+[0m13:43:28.288185 [debug] [MainThread]: Flushing usage events
+[0m13:43:29.921734 [debug] [MainThread]: An error was encountered while trying to flush usage events

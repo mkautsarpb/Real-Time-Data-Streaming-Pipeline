@@ -1,0 +1,19 @@
+version: 2
+
+models:
+  - name: dim_author
+    description: "Author dimension table"
+    columns:
+      - name: author_name
+        tests:
+          - unique
+          - not_null
+
+  - name: fact_books
+    description: "Books fact table"
+    columns:
+      - name: authors
+        tests:
+          - relationships:  
+              to: ref('dim_author')
+              field: author_name
