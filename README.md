@@ -82,7 +82,7 @@ stream-sense-project/
 │   └── gold/
 │       └── silver_to_postgres_books.py # Silver → PostgreSQL
 │
-├── books_analytics/              # dbt project (🔥 ini sudah BENAR)
+├── books_analytics/            
 │   ├── models/
 │   │   ├── staging/
 │   │   │   ├── stg_books.sql
@@ -99,7 +99,7 @@ stream-sense-project/
 ├── superset/
 │   └── dashboards/               # Export dashboard Superset (opsional)
 │
-├── README.md                     # ⭐ MAIN README (portfolio)
+├── README.md                     
 └── .gitignore
 
 
