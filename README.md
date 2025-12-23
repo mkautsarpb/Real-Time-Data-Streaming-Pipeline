@@ -60,27 +60,47 @@ BI / Analytics (Superset-ready)
 
 ## 📂 Project Structure
 
-project-root/
-├── docker-compose.yml
+stream-sense-project/
+│
+├── docker/
+│   └── docker-compose.yml        # Kafka, Spark, MinIO, Postgres, Superset
+│
 ├── data/
-│ └── best-selling-books.csv
+│   └── best-selling-books.csv    # Dataset sumber (simulasi sensor)
+│
 ├── producer/
-│ └── kafka_producer.py
+│   ├── kafka_producer.py         # CSV → Kafka
+│   └── requirements.txt
+│
 ├── spark/
-│ ├── streaming/
-│ │ └── kafka_to_minio.py
-│ ├── silver/
-│ │ └── raw_to_silver_books.py
-│ └── warehouse/
-│ └── silver_to_postgres_books.py
-├── books_analytics/
-│ └── models/
-│ ├── staging/
-│ │ └── stg_books.sql
-│ └── marts/
-│ ├── dim_author.sql
-│ └── fact_books.sql
-└── README.md
+│   ├── bronze/
+│   │   └── kafka_to_minio.py     # Kafka → MinIO (raw / bronze)
+│   │
+│   ├── silver/
+│   │   └── raw_to_silver_books.py # Raw → Silver (cleaning & schema)
+│   │
+│   └── gold/
+│       └── silver_to_postgres_books.py # Silver → PostgreSQL
+│
+├── books_analytics/              # dbt project (🔥 ini sudah BENAR)
+│   ├── models/
+│   │   ├── staging/
+│   │   │   ├── stg_books.sql
+│   │   │   └── sources.yml
+│   │   │
+│   │   ├── marts/
+│   │   │   ├── dim_author.sql
+│   │   │   ├── fact_books.sql
+│   │   │   └── schema.yml
+│   │
+│   ├── dbt_project.yml
+│   └── README.md
+│
+├── superset/
+│   └── dashboards/               # Export dashboard Superset (opsional)
+│
+├── README.md                     # ⭐ MAIN README (portfolio)
+└── .gitignore
 
 
 ---
